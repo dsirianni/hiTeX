@@ -1,0 +1,270 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[export]{adjustbox}
+\usepackage{epigraph}%For quote
+\usepackage{hyperref}  % for hyperlinks in doc
+\usepackage{appendixnumberbeamer}
+\usepackage[superscript]{cite}
+\usepackage[export]{adjustbox}
+\usepackage{picture} % For right bracing within list
+\usepackage{color}
+
+%%%%%    Tables & Figures    %%%%%
+
+\usepackage{dcolumn}    % decimal align in tables
+\usepackage{graphicx}       % Figures inside cells of tables
+\usepackage{multirow}   % for table cells to span rows
+\usepackage{siunitx,booktabs}
+\usepackage{threeparttable}
+
+\usepackage{tikz}
+     \usetikzlibrary{arrows,shapes,backgrounds}
+\usepackage{etoolbox}
+\usepackage{wrapfig}
+\usepackage{subfig}
+
+%%%%%    Mathematics    %%%%%
+
+\usepackage{amsmath,amsfonts,amssymb,mathrsfs,bm}
+\usepackage{gensymb,pifont}
+\usepackage{array}
+\usepackage{cancel}
+
+%%%%%    Code Formatting    %%%%%
+
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{upquote}
+\definecolor{codegrey}{gray}{0.95}
+
+% Formats Python code with Minted
+\newminted{python}{%
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+bgcolor=codegrey,
+fontsize=\scriptsize,
+linenos,
+}
+
+\newenvironment{mintypython}
+{\VerbatimEnvironment\begin{center}\begin{minipage}{0.95\textwidth}\begin{pythoncode}}
+{\end{pythoncode}\end{minipage}\end{center}}
+
+% Formats Bash with Minted
+\newminted{bash}{%
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+bgcolor=codegrey,
+fontsize=\scriptsize,
+}
+
+\newenvironment{mintybash}
+{\VerbatimEnvironment\begin{center}\begin{minipage}{0.95\textwidth}\begin{bashcode}}
+{\end{bashcode}\end{minipage}\end{center}}
+
+%\usepackage{algorithmicx}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+%\usepackage{algorithmic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%     Colors     %%%%%
+% Background color
+\definecolor{BGblue}{RGB}{248, 248, 255}
+
+% All possible color specs
+%\setbeamercolor{alerted text}{fg=orange}
+\setbeamercolor{background canvas}{bg=BGblue}
+%\setbeamercolor{block body alerted}{bg=normal text.bg!90!black}
+%\setbeamercolor{block body}{bg=normal text.bg!90!black}
+%\setbeamercolor{block body example}{bg=normal text.bg!90!black}
+%\setbeamercolor{block title alerted}{use={normal text,alerted text},fg=alerted text.fg!75!normal text.fg,bg=normal text.bg!75!black}
+%\setbeamercolor{block title}{bg=blue}
+%\setbeamercolor{block title example}{use={normal text,example text},fg=example text.fg!75!normal text.fg,bg=normal text.bg!75!black}
+%\setbeamercolor{fine separation line}{}
+%\setbeamercolor{frametitle}{fg=brown}
+%\setbeamercolor{item projected}{fg=black}
+%\setbeamercolor{normal text}{bg=black,fg=yellow}
+%\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+%\setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
+%\setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
+%\setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
+%\setbeamercolor{section in sidebar}{fg=brown}
+%\setbeamercolor{section in sidebar shaded}{fg=grey}
+%\setbeamercolor{separation line}{}
+%\setbeamercolor{sidebar}{bg=red}
+%\setbeamercolor{sidebar}{parent=palette primary}
+%\setbeamercolor{structure}{bg=black, fg=green}
+%\setbeamercolor{subsection in sidebar}{fg=brown}
+%\setbeamercolor{subsection in sidebar shaded}{fg=grey}
+%\setbeamercolor{title}{fg=brown}
+%\setbeamercolor{titlelike}{fg=brown}
+
+% Blocks 
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\addtobeamertemplate{block begin}{\pgfsetfillopacity{0}}{\pgfsetfillopacity{1}}
+
+%%%%%     Frame Options     %%%%%
+% Make points you haven't shown invisible, and the ones you have grayed out
+\setbeamercovered{invisible}
+\setbeamercovered{%
+   again covered={\opaqueness<1->{50}}}
+
+% Footer
+\setbeamertemplate{navigation symbols}{} % Turn off navigation symbols
+%\setbeamertemplate{footline}[page number] % Uncomment to replace default footer with only slide #s
+\setbeamerfont{footnote}{size=\tiny}
+\usepackage[numbers]{natbib}
+\usepackage{bibentry}
+
+% Logo in upper right: redefine frametitle
+\defbeamertemplate{frametitle}{mydefault}{%
+  \insertframetitle%
+}
+
+\defbeamertemplate{frametitle}{imagetitle}[1]{%
+  \insertframetitle \hfill\includegraphics[width=0.08\textwidth]{#1}%
+}
+
+\BeforeBeginEnvironment{frame}{%
+  \setbeamertemplate{frametitle}[mydefault]%
+}
+
+\makeatletter
+\define@key{beamerframe}{imagetitle}[true]{%
+  \setbeamertemplate{frametitle}[imagetitle]{#1}%
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Standard Title Frame
+\newcommand{\titleframe}{
+    \begin{frame}
+    \titlepage
+    \end{frame}
+}
+
+% GT-Themed Title Frame
+\newcommand{\GTtitleframe}{
+    {%
+        \usebackgroundtemplate{%
+            \includegraphics[width=\paperwidth]{/Users/dasirianni/Documents/Presentations/templates/gt_template_light_titlebg.pdf}
+        }
+        \begin{frame}
+        \titlepage
+        \end{frame}
+    }
+}
+
+% Front-End TOC
+\newcommand{\frontTOC}{
+    \begin{frame}
+    \frametitle{Overview}
+    \tableofcontents[hideallsubsections]
+    \end{frame}
+}
+
+% SI TOC
+\newcommand{\siTOC}{
+    \appendix
+    \begin{frame}{Additional Materials}
+    \tableofcontents[hideallsubsections]
+    \end{frame}
+}
+
+% Acknowledgements
+\newcommand{\acknowledgements}{
+    \section{Acknowledgements}
+    \begin{frame}\frametitle{Acknowledgements}
+    
+    \begin{columns}
+    \begin{column}{.6\textwidth}
+        \begin{center}
+            \includegraphics[width=\textwidth]{/Users/dasirianni/Documents/Presentations/media/group_photos/group_summer2016.jpg}
+        \end{center}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \begin{center}
+            \vspace{-0.25cm}
+            \includegraphics[width=\textwidth]{/Users/dasirianni/Gits/psi4numpy/media/psi4numpybanner.png}
+            \vspace{0.25cm}
+            \includegraphics[width=.6\textwidth]{/Users/dasirianni/Documents/Presentations/media/logos/CDSgroup/logo_sherrillgroup_trans.png}
+            \vspace{0.25cm}
+            %\includegraphics[width=\textwidth]{/Users/dasirianni/Documents/Presentations/logos/funding/logo_nsf_trans.pdf}
+            %\vspace{0.25cm}
+            \includegraphics[width=.6\textwidth]{/Users/dasirianni/Documents/Presentations/media/logos/GaTech/gt_logos/Georgia-Tech.pdf}
+        \end{center}
+    \end{column}
+    \end{columns}
+    \vfill
+    \begin{center}
+    \includegraphics[width=0.9\textwidth]{/Users/dasirianni/Documents/Presentations/media/logos/funding/bms.jpg}
+    \end{center}
+    
+    \end{frame}
+}
+
+%A two-column slide, where arg1 is the title, arg2 is
+%column one, arg3 is column two, and arg4 is a footer
+\newcommand{\TwoColumnSlide}[4]{
+    \begin{frame}{#1}
+    \begin{columns}[t, totalwidth=1.0\textwidth]
+    \begin{column}{0.49\linewidth}
+    
+    #2
+    
+    \end{column}
+    \begin{column}{0.49\linewidth}
+    
+    #3
+    
+    \end{column}
+    \end{columns}
+    
+    #4
+    
+    \end{frame}
+}
+
+%Adds a picture, with the path given as arg1, to a slide, respecting the sizes of the environment and not distorting the picture.  Also workswith Beamer's overlays
+\newcommand<>{\AddPicture}[1]{
+%\begin{center}
+\centering
+\includegraphics[max width=\linewidth,max
+height=.75\textheight,keepaspectratio]{#1}
+%\end{center}
+}
+
+% Enables frame logos as an argument to frame: \begin{frame}[logos=blargh.png]{Frame Title}
+\newcommand{\framelogo}[1]{\def\thisframelogos{#1}}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=-7pt] at (current page.north east) {%
+    \foreach \img in \thisframelogos {%
+        \hspace{.5ex}%
+        \includegraphics[height=2cm]{\img}%
+    }%
+};
+\end{tikzpicture}}
+
+\BeforeBeginEnvironment{frame}{\framelogo{}}
+
+
+\makeatletter
+\define@key{beamerframe}{logos}[true]{\framelogo{#1}}
+\makeatother
+
+

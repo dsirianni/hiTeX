@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page Formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[fleqn,oneside,12pt]{article}
+
+% Standard Page Dimensions
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+% Custom Page Dimensions
+%\usepackage{blindtext}
+%\usepackage[paperheight=19in,paperwidth=8.5in,top=1in,bottom=1in,right=1in,left=1in]{geometry}
+
+\usepackage{fancyhdr}
+
+\fancypagestyle{style}{
+    \fancyhf{}
+    \fancyhead[L]{\leftmark} %\slshape
+    \fancyhead[R]{\rightmark} %\slshape
+    }
+\pagestyle{style}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables & Figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{multirow,rotating,booktabs,dcolumn,longtable}   % for table cells to span rows
+\usepackage[table]{xcolor} % Colored table cells
+\usepackage{caption}
+\usepackage{subcaption} % Captions on subfigures
+\usepackage{threeparttable}
+\usepackage{wrapfig}
+\usepackage{multirow} % Span multiple rows in tables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath,bm}
+\usepackage{amsfonts} % Math fonts
+\usepackage{amsthm} % Theorem handling
+\usepackage{mathrsfs} % Math fonts
+\usepackage{bbm} % For doublestruck 1
+\usepackage{cancel} % Cancel terms to value in math mode
+\usepackage{array} % Arrays
+\usepackage{gensymb} % General symbols
+\usepackage{mathdots} % Inverse diagonal dots \iddots
+\usepackage{arydshln} % Dotted lines in matrices
+% Example dotted line matrix:
+%$\left(\,
+%\begin{array}{ : c : c : }\hdashline
+%\sin x & \cos x\\\hdashline
+%     B & A       \\\hdashline
+%\end{array}\,\right)
+%$
+% Should output
+% (-------------------)
+% ( | sin x | cos x | )
+% (-------------------)
+% ( |   B   |   A   | )
+% (-------------------)
+\usepackage{accents}
+\usepackage{tensor} % For properly formatted indices on tensor objects
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code Formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{algorithmicx}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{upquote}
+\definecolor{codegrey}{gray}{0.95}
+
+% Formats Python code with Minted
+\newminted{python}{%
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+bgcolor=codegrey,
+fontsize=\scriptsize,
+linenos}
+
+\newenvironment{mintypython}
+{\VerbatimEnvironment\begin{center}\begin{minipage}{\textwidth}\begin{pythoncode}}
+{\end{pythoncode}\end{minipage}\end{center}}
+
+%\renewcommand*\listingscaption{Code Snippet}
+%\renewcommand*\listoflistingscaption{List of Code Snippets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List Options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[shortlabels]{enumitem} % Enumerate with different delimiters
+
+% Tighten up enumerate
+\setlist[enumerate]{nolistsep}
+%\setlist[enumerate,1]{nolistsep}
+\setlist[enumerate,1]{label=(\roman*),align=left}
+%\setlist[enumerate,2]{nolistsep}
+\setlist[enumerate,2]{label=(\alph*),align=left}
+
+% Add outline package, redefine delimiters
+\usepackage{outlines}
+\setenumerate[1]{label=\Roman*.}
+\setenumerate[2]{label=\Alph*.}
+\setenumerate[3]{label=\roman*.}
+\setenumerate[4]{label=\alph*.}
+
+% The below will create a 4-level I., A., i., a. outline:
+
+%\begin{outline}[enumerate]
+%   \1 Level 1
+%      \2 Level 2
+%         \3 Level 3
+%            \4 Level 4
+%\end{outline}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography, References, Footnotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{unsrt}
+\usepackage[superscript]{cite}
+%% The next two packages must be loaded in this order for footnote links to work!!
+\usepackage[bottom]{footmisc} % Footnotes at the bottom
+\usepackage{hyperref}  % for hyperlinks in doc. Remember...load after footmisc!
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\usepackage{perpage}
+\MakePerPage{footnote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Misc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[T1]{fontenc}
+\usepackage{color}
+

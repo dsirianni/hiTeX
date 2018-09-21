@@ -1,0 +1,218 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography Style Macros: Article Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\jcpARef}[5]{
+        \noindent #1. \textit{#2} \textbf{#3}, #4 (#5)}
+        % 1: Authors, First initial(s), Last Name, comma separated
+        % 2: Journal abbreviation
+        % 3: volume
+        % 4: page number
+        % 5: year
+        % 6: doi
+
+\newcommand{\prlARef}[5]{
+        \noindent #1. \textit{#2} \textbf{#3}, #4 (#5).}
+        % 1: Authors, First initial(s), Last Name, comma separated
+        % 2: Journal abbreviation
+        % 3: volume
+        % 4: page number
+        % 5: year
+
+\newcommand{\prlAHRef}[6]{
+        \noindent #1. \href{<#6>}{<\textit{#2} \textbf{#3}, #4 (#5).>}}
+        % 1: Authors, First initial(s), Last Name, comma separated
+        % 2: Journal abbreviation
+        % 3: volume
+        % 4: page number
+        % 5: year
+        % 6: URL to paper
+
+\newcommand{\ACSbookARef}[5]{
+        \noindent #1. \textit{#2}. #3: #4, #5.}
+        % 1: Authors, ACS format
+        % 2: Book title
+        % 3: Publisher
+        % 4: Place of Publication
+        % 5: Year of publication
+
+\newcommand{\APSbookARef}[5]{
+        \noindent #1, \textit{#2} (#3, #4, #5).}
+        % 1: Authors, APS format
+        % 2: Book title
+        % 3: Publisher
+        % 4: Place of Publication
+        % 5: Year of Publication
+  
+\newcommand{\compendARef}[6]{
+        \noindent\textit{#1}; #2, Eds.; #3; #4: #5, #6.}
+        % 1: Title of book
+        % 2: Editors, ACS author format
+        % 3: Book series title & number
+        % 4: Publisher
+        % 5: Place of Publication
+        % 6: year of publication
+
+\newcommand{\coursematARef}[3]{
+        \noindent{#1, ``#2.''  #3 course materials: available on T-Square.}}
+    % 1: Authors, APS format
+    % 2: Title of materials
+    % 3: Course abbreviation & number, e.g., CHEM 6491
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography Style Macros: Beamer Presentation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\jcpBRef}[4]{
+        \textit{#1} \textbf{#2}, #3 (#4)}
+        % 2: Journal abbreviation
+        % 3: volume
+        % 4: page number
+        % 5: year
+        % 6: doi
+
+\newcommand{\prlBRef}[4]{
+        \textit{#1} \textbf{#2}, #3 (#4).}
+        % 2: Journal abbreviation
+        % 3: volume
+        % 4: page number
+        % 5: year
+
+\newcommand{\prlBHRef}[5]{
+        \href{<#5>}{<\textit{#1} \textbf{#2}, #3 (#4).>}}
+        % 2: Journal abbreviation
+        % 3: volume
+        % 4: page number
+        % 5: year
+        % 6: URL to paper
+
+\newcommand{\ACSbookBRef}[4]{
+        \textit{#1}. #2: #3, #4.}
+        % 2: Book title
+        % 3: Publisher
+        % 4: Place of Publication
+        % 5: Year of publication
+
+\newcommand{\APSbookBRef}[4]{
+        \textit{#1} (#2, #3, #4).}
+        % 2: Book title
+        % 3: Publisher
+        % 4: Place of Publication
+        % 5: Year of Publication
+  
+\newcommand{\compendBRef}[6]{
+        \noindent\textit{#1}; #2, Eds.; #3; #4: #5, #6.}
+        % 1: Title of book
+        % 2: Editors, ACS author format
+        % 3: Book series title & number
+        % 4: Publisher
+        % 5: Place of Publication
+        % 6: year of publication
+
+\newcommand{\coursematBRef}[3]{
+        \noindent{#1, ``#2.''  #3 course materials: available on T-Square.}}
+    % 1: Authors, APS format
+    % 2: Title of materials
+    % 3: Course abbreviation & number, e.g., CHEM 6491
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography Style Macros: CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\PaperEntry}[8]{
+    \noindent ``#1,'' #2, \textit{#3} \textbf{#4}, #5 (#6) \href{#8}{(doi: #7)}}
+    % 1: Paper Title
+    % 2: Author List
+    % 3: Journal Abbreviation
+    % 4: Volume number
+    % 5: Page number
+    % 6: Year
+    % 7: doi
+    % 8: Link to doi
+
+\newcommand{\SubmittedPaperEntry}[3]{
+    \noindent ``#1,'' #2, \textit{#3} (Submitted)}
+    % 1: Paper Title
+    % 2: Author List
+    % 3: Journal Abbreviation
+
+\newcommand{\SubmittedPaperwRXIV}[5]{
+    \noindent ``#1,'' #2, \textit{#3} (Submitted) \href{#5}{ChemRxiv: #4}}
+    % 1: Paper Title
+    % 2: Author List
+    % 3: Journal Abbreviation
+    % 4: DOI
+    % 5: DOI URL for linking
+
+\newcommand{\InprepPaperEntry}[2]{
+    \noindent ``#1,'' #2. (In preparation)}
+    % 1: Paper Title
+    % 2: Author list
+
+\newcommand{\ArxivEntry}[3]{
+    \noindent #1, ``\href{http://arxiv.org/abs/#3}{#2}", \textit{{cond-mat/}#3}.}
+
+\newcommand{\ChemRxivEntry}[5]{
+    \noindent ``{\bf #1},'' #2, (#3). \href{#5}{(doi: #4)}
+    % 1: Preprint Title
+    % 2: Author list, JCP formatting
+    % 3: Year
+    % 4: DOI
+    % 5: DOI URL for linking
+    }
+
+\newcommand{\BookEntry}[4]{
+    \noindent #1, ``\href{#3}{#4}", \textit{#3}.}
+
+\newcommand{\FellowEntry}[3]{
+        \noindent #1, #2. (#3)}
+        % 1: Fellowship title
+        % 2: Funding agency
+
+\newcommand{\PresEntry}[6]{
+    \noindent #1, #2. #3: ``#4" (#5) #6}
+
+\newcommand{\TalkEntry}[7]{
+    \noindent ``\textbf{#1},'' Contributed talk at the #2. #3, \##4. (#5)
+    \begin{description}
+    \item[#6] #7
+    \end{description}}
+    % 1: Title
+    % 2: Meeting
+    % 3: Symposium Title
+    % 4: Talk #
+    % 5: Date, mm/yyyy
+    % 6-7: Award?
+        % 6: Place:
+        % 7: Award Title
+
+\newcommand{\PosterEntry}[7]{
+    \noindent ``\textbf{#1},'' Contributed poster at the #2. #3, \##4. (#5)
+    \begin{description}
+    \item[#6] #7
+    \end{description}}
+    % 1: Title
+    % 2: Meeting
+    % 3: Symposium Title
+    % 4: Talk #
+    % 5: Date, mm/yyyy
+    % 6-7: Award?
+        % 6: Place:
+        % 7: Award Title
+
+\newcommand{\SeminarEntry}[5]{
+    \noindent ``\textbf{#1},'' #2, #3: #4. (#5)}
+    % 1: Title
+    % 2: Institution
+    % 3: Department
+    % 4: Colloquium Name
+    % 5: Date, mm/yyyy
+
+\newcommand{\VolunteerEntry}[4]{
+    \noindent #1, #2. (#3)\\
+        \noindent Description: #4.}
+
+\newcommand{\ThesisEntry}[5]{
+    \noindent #1 -- #2 #3 ``#4" \textit{#5}}
+
+\newcommand{\CourseEntry}[3]{
+    \noindent \item{#1: \textbf{#2} \\ #3}}

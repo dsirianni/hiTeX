@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Symbols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Doublestruck
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\1}{\mathbbm{1}}
+\newcommand{\eyen}{\mathbbm{1}_n}
+\newcommand{\eyem}{\mathbbm{1}_m}
+\newcommand{\eyenn}{\mathbbm{1}_{n\times n}}
+\newcommand{\eyemm}{\mathbbm{1}_{m\times m}}
+\newcommand{\eyemn}{\mathbbm{1}_{m\times n}}
+\newcommand{\eyenm}{\mathbbm{1}_{n\times m}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Zp}{\mathbb{Z}^+}
+\newcommand{\Cn}{\mathbb{C}^n}
+\newcommand{\Cm}{\mathbb{C}^m}
+\newcommand{\Cnn}{\mathbb{C}^{n\times n}}
+\newcommand{\Cmm}{\mathbb{C}^{m\times m}}
+\newcommand{\Cmn}{\mathbb{C}^{m\times n}}
+\newcommand{\Cnm}{\mathbb{C}^{n\times m}}
+\newcommand{\Rn}{\mathbb{R}^n}
+\newcommand{\Rm}{\mathbb{R}^m}
+\newcommand{\Rnn}{\mathbb{R}^{n\times n}}
+\newcommand{\Rmm}{\mathbb{R}^{m\times m}}
+\newcommand{\Rmn}{\mathbb{R}^{m\times n}}
+\newcommand{\Rnm}{\mathbb{R}^{n\times m}}
+\newcommand{\Rf}[1]{\mathbb{R}^{#1}}
+
+% Calligraphy for monomers in N-Body
+\newcommand{\mA}{\mathcal{A}}
+\newcommand{\mB}{\mathcal{B}}
+\newcommand{\mC}{\mathcal{C}}
+
+% Computational Scaling
+\newcommand{\compscale}[2]{\mathcal{O}(#1^{#2})}
+
+% Chemistry 
+\newcommand*{\plimsoll}{{\ensuremath{-\kern-4pt{\ominus}\kern-4pt-}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subject-Specific
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Operators
+\newcommand{\opqm}[1]{\widehat{\mathscr{#1}}}
+\newcommand{\opcm}[1]{\widehat{\mathcal{#1}}}
+\newcommand{\supd}{^{\dagger}}
+\newcommand{\adjoint}[1]{#1\supd}
+
+% General Quantum
+\newcommand{\comm}[2]{[\textbf{#1},\textbf{#2}]}
+\newcommand{\anticomm}[2]{\{\textbf{#1},\textbf{#2}\}}
+\newcommand{\Hhat}{\hat{\mathcal{H}}}
+\newcommand{\diracd}[2]{\delta\left(#1 - #2\right)}
+\newcommand{\bra}[1]{\langle\, #1\, \vert}
+\newcommand{\ket}[1]{\vert\, #1\,\rangle}
+\newcommand{\bracket}[2]{\langle\, #1\, \vert\, #2\,\rangle}
+\newcommand{\ketbra}[2]{\vert\, #1\,\rangle\langle\,#2\,\vert}
+\newcommand{\braoket}[3]{\langle\,#1\,\vert\, #2\,\vert\, #3\,\rangle}
+\newcommand{\Mij}[3]{\langle\, #1\, \vert\, #2\, \vert\, #3\, \rangle}
+\newcommand{\proj}[1]{\sum_{#1}\ketbra{#1}{#1}}
+\newcommand{\projAtoB}[2]{\proj{#2}\,#1\,\rangle}
+
+% Calculus
+\newcommand{\intR}{\int_{\mathbb{R}}}
+\newcommand{\dx}{\mathrm{d}x\;}
+\newcommand{\dy}{\mathrm{d}y\;}
+\newcommand{\dz}{\mathrm{d}z\;}
+\newcommand{\dt}{\mathrm{d}t\;}
+\newcommand{\dr}{\mathrm{d}r\;}
+\newcommand{\drrr}{\mathrm{d}r^3\;}
+\newcommand{\drrri}[1]{\mathrm{d}{\bf r}^3_{#1}\;}
+\newcommand{\dw}{\mathrm{d}\omega}
+\newcommand{\dwi}[1]{\mathrm{d}\omega_{#1}}
+\newcommand{\dP}{\mathrm{d}P\;}
+\newcommand{\df}[1]{\mathrm{d}#1\;}
+\newcommand{\dfu}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\ddfu}[2]{\frac{\mathrm{d}^2#1}{\mathrm{d}#2^2}}
+\newcommand{\px}{\frac{\partial}{\partial\, x}}
+\newcommand{\py}{\frac{\partial}{\partial\, y}}
+\newcommand{\pz}{\frac{\partial}{\partial\, z}}
+\newcommand{\pt}{\frac{\partial}{\partial\, t}}
+\newcommand{\pfu}[2]{\frac{\partial\, #1}{\partial\, #2}}
+\newcommand{\ppx}{\frac{\partial^2}{\partial\, x^2}}
+\newcommand{\ppy}{\frac{\partial^2}{\partial\, y^2}}
+\newcommand{\ppz}{\frac{\partial^2}{\partial\, z^2}}
+\newcommand{\ppt}{\frac{\partial^2}{\partial\, t^2}}
+\newcommand{\mixpp}[2]{\frac{\partial^2}{\partial\, #1\partial\,#2}}
+\newcommand{\ppfu}[2]{\frac{\partial^2\, #1}{\partial\, #2^2}}
+
+% Matrix & Vector Norms
+\newcommand{\norm}[2]{\| #1\|_{#2}}
+\newcommand{\onenorm}[1]{\| #1\|_{\rm 1}}
+\newcommand{\twonorm}[1]{\| #1\|_{\rm 2}}
+\newcommand{\Fnorm}[1]{\| #1\|_{\rm F}}
+\newcommand{\inftynorm}[1]{\| #1\|_{\infty}}
+\newcommand{\Idim}[2]{I_{#1\times #2}}
+\newcommand{\Imm}{I_{m\times m}}
+\newcommand{\Inn}{I_{n\timex n}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Electronic Structure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hartree-Fock
+\newcommand{\xeri}[4]{\int\drrri{1}\drrri{2}\phi_{#1}({\bf r}_1)\phi_{#2}({\bf r}_1)\frac{1}{r_{12}}\phi_{#3}({\bf r}_2)\phi_{#4}({\bf r}_2)}
+%\newcommand{\aoeri}{\int\drrri{1}\drrri{2}\phi_{\mu}({\bf r}_1)\phi_{\nu}({\bf r}_1)\frac{1}{r_{12}}\phi_{\lambda}({\bf r}_2)\phi_{\sigma}({\bf r}_2)}
+\newcommand{\aoeri}{\xeri{\mu}{\nu}{\lambda}{\sigma}}
+\newcommand{\chemeri}[4]{\left(#1#2\vert #3#4\right)}
+\newcommand{\physeri}[4]{\langle#1#2\vert #3#4\rangle}
+\newcommand{\pqrs}{\left(\mu\nu\vert\lambda\sigma\right)}
+% MP2
+\newcommand{\iajb}{\left(ia\vert jb\right)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Units
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\kcal}{$\,$kcal mol$^{-1}\,$}
+\newcommand{\kJ}{$\,$kJ mol$^{-1}\,$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Constants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\kB}{k_{\rm B}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% General
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cancel Terms in Red
+\renewcommand{\CancelColor}{\color{red}}
+
+% Overbar w/ goldilocks width
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+% Numbering only particular equations w/in align* env
+\newcommand\numberthis{\stepcounter{equation}\tag{\theequation}}
+

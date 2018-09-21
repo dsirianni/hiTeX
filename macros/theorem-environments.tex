@@ -1,0 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorem Styles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{theorem}{Theorem}[section]
+\numberwithin{theorem}{subsection} % Number wrt subsection as well
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newtheorem{corollary}{Corollary}[theorem]
+\numberwithin{corollary}{subsection} 
+
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\numberwithin{definition}{subsection} 
+ 
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark} % Asterisk kills numbering.
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\numberwithin{example}{subsection}
+
+\theoremstyle{definition}
+\newtheorem*{exercise}{Exercise}
+
+\theoremstyle{definition}
+\newtheorem*{problem}{Problem}
+
