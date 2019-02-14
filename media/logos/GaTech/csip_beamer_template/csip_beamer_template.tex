@@ -1,0 +1,122 @@
+%GT-CSIP Beamer Theme.
+
+\documentclass[compress]{beamer}
+\mode<presentation>
+
+\usetheme{Luebeck}
+\hypersetup{pdfpagemode=FullScreen} % makes your presentation go automatically to full screen
+
+% define your own colors:
+\definecolor{gold}{rgb}{260,195,0}
+
+% could choose different themes for the "inside" and "outside"
+% \usepackage{beamerinnertheme_______}
+% inner themes include circles, default, inmargin, rectangles, rounded
+% outer themes include default, infolines, miniframes, shadow, sidebar, smoothbars, smoothtree, split, tree
+\useinnertheme{default}
+\useoutertheme{default}
+
+% To have the same footer on all slides
+\setbeamertemplate{footline}{\tiny{} } % makes the footer empty
+\setbeamertemplate{headline}[default]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[framed]
+
+% Make GT-CSIP footer logo scheme
+\setbeamercolor{structure}{fg = blue!40!gold,bg=blue!40!gold}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=blue!40!gold}
+% Create footer with frame number and GTRI logo
+\usefoottemplate{\vbox{
+	\hspace{-24px}			
+	\insertframenumber \, of \inserttotalframenumber \hfill
+	\includegraphics[height=0.8cm] {gt}
+	\hspace{8px}
+	\includegraphics[height=0.8cm] {csip_new_logo}
+	\hspace{-24px}
+	\vspace{4px}
+}}
+
+% include packages
+\usepackage{amsmath} %helpful package always
+\usefonttheme{professionalfonts} %use regular CM fonts for math mode
+\bibliographystyle{apalike} %
+\graphicspath{{images/}}
+
+%  Outline at each section
+\AtBeginSection[] {
+  \begin{frame}
+   \frametitle{Outline}
+    \tableofcontents[currentsection]
+    \addtocounter{framenumber}{-1}
+  \end{frame}
+}
+
+%  Could have outline at each subsection
+%\AtBeginSubsection[] {
+%  \begin{frame}
+%   \frametitle{Outline}
+%    \tableofcontents[currentsubsection]
+%    \addtocounter{framenumber}{-1}
+%  \end{frame}
+%}
+
+%  Set title information
+\title{The Title}
+\author{The Author}
+\date{\today}
+
+\begin{document}
+
+%  Make Title Page
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height= \paperheight]{tower}}
+\frame{
+\setcounter{framenumber}{0}
+\titlepage
+}}
+
+%  Make beginning outline
+\frame{\frametitle{Outline}
+\tableofcontents
+}
+
+%  Begin content
+\section{The First Section}
+\frame{\frametitle{The Frame Title}
+Some Words
+\begin{itemize}
+\item The First Item
+\begin{equation}
+e^{j\varphi}=\cos{\varphi}+j\sin{\varphi}
+\end{equation}
+\item The Second Item
+\item The Third Item
+\end{itemize}
+}
+
+\section{The Second Section}
+\frame{\frametitle{The Frame Title}
+Some Words
+\begin{itemize}
+\item The First Item
+\begin{equation}
+e^{j\varphi}=\cos{\varphi}+j\sin{\varphi}
+\end{equation}
+\item The Second Item
+\item The Third Item
+\end{itemize}
+}
+
+\section{The Third Section}
+\frame{\frametitle{The Frame Title}
+Some Words
+\begin{itemize}
+\item The First Item
+\begin{equation}
+e^{j\varphi}=\cos{\varphi}+j\sin{\varphi}
+\end{equation}
+\item The Second Item
+\item The Third Item
+\end{itemize}
+}
+
+\end{document}
