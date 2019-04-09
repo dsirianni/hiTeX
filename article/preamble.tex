@@ -8,7 +8,6 @@
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
 % Custom Page Dimensions
-%\usepackage{blindtext}
 %\usepackage[paperheight=19in,paperwidth=8.5in,top=1in,bottom=1in,right=1in,left=1in]{geometry}
 
 \usepackage{fancyhdr}
@@ -25,12 +24,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{multirow,rotating,booktabs,dcolumn,longtable}   % for table cells to span rows
-\usepackage[table]{xcolor} % Colored table cells
+\usepackage[table,usenames,svgnames,dvipsnames]{xcolor} % Colored table cells
 \usepackage{caption}
 \usepackage{subcaption} % Captions on subfigures
 \usepackage[para,online,flushleft]{threeparttable}
 \usepackage{wrapfig}
 \usepackage{multirow} % Span multiple rows in tables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+\tcbuselibrary{skins,breakable}
+\usetikzlibrary{shadings,shadows}
+\newenvironment{exampleblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightGreen,colframe=DarkGreen,%
+    colbacklower=LimeGreen!75!LightGreen,%
+    title=#1]}%
+    {\endtcolorbox}
+
+\newenvironment{alertblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightCoral,colframe=DarkRed,%
+    colbacklower=Tomato!75!LightCoral,%
+    title=#1]}%
+    {\endtcolorbox}
+
+\newenvironment{block}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightBlue,colframe=DarkBlue,%
+    colbacklower=DarkBlue!75!LightBlue,%
+    title=#1]}%
+    {\endtcolorbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mathematics
@@ -143,3 +173,5 @@ linenos}
 \usepackage[T1]{fontenc}
 \usepackage{color}
 \usepackage{blindtext} % Lorem ipsum etc. for testing. Call w/ `\blindtext[x]` for x repetitions
+\newcommand{\lorem}[1]{\blindtext[#1]}
+\usepackage[version=4]{mhchem}

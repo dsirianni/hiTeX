@@ -40,23 +40,30 @@
 
 % Chemistry 
 \newcommand*{\plimsoll}{{\ensuremath{-\kern-4pt{\ominus}\kern-4pt-}}}
+\newcommand{\aq}{$_{({aq})}$}
+\newcommand{\s}{$_{({s})}$}
+\newcommand{\liq}{$_{({l})}$}
+\newcommand{\g}{$_{({g})}$}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Subject-Specific
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Thermodynamics
 \newcommand{\change}[2]{\Delta_{\rm #1}#2}
+\renewcommand{\deg}{^{\circ}} % For standard state
 
 % Operators
 \newcommand{\opqm}[1]{\widehat{\mathscr{#1}}}
 \newcommand{\opcm}[1]{\widehat{\mathcal{#1}}}
 \newcommand{\supd}{^{\dagger}}
 \newcommand{\adjoint}[1]{#1\supd}
+\newcommand{\Hhat}{\widehat{H}}
+\newcommand{\Hqm}{\widehat{\mathscr{H}}}
+\newcommand{\Hcm}{\widehat{\mathca{H}}}
 
 % General Quantum
 \newcommand{\comm}[2]{[\textbf{#1},\textbf{#2}]}
 \newcommand{\anticomm}[2]{\{\textbf{#1},\textbf{#2}\}}
-\newcommand{\Hhat}{\hat{\mathcal{H}}}
 \newcommand{\diracd}[2]{\delta\left(#1 - #2\right)}
 \newcommand{\bra}[1]{\langle\, #1\, \vert}
 \newcommand{\ket}[1]{\vert\, #1\,\rangle}
@@ -70,6 +77,8 @@
 % Calculus
 \newcommand{\intR}{\int_{\mathbb{R}}}
 \newcommand{\dx}{\mathrm{d}x\;}
+\newcommand{\dvecx}{\mathrm{d}{\bf x}\;}
+\newcommand{\dvecxi}[1]{\mathrm{d}{\bf x}_{#1}\;}
 \newcommand{\dy}{\mathrm{d}y\;}
 \newcommand{\dz}{\mathrm{d}z\;}
 \newcommand{\dt}{\mathrm{d}t\;}
@@ -108,13 +117,21 @@
 % Electronic Structure
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Hartree-Fock
-\newcommand{\xeri}[4]{\int\drrri{1}\drrri{2}\phi_{#1}({\bf r}_1)\phi_{#2}({\bf r}_1)\frac{1}{r_{12}}\phi_{#3}({\bf r}_2)\phi_{#4}({\bf r}_2)}
+\newcommand{\feri}[4]{\int\drrri{1}\drrri{2}\phi_{#1}({\bf r}_1)\phi_{#2}({\bf r}_1)\frac{1}{r_{12}}\phi_{#3}({\bf r}_2)\phi_{#4}({\bf r}_2)}
+\newcommand{\spineri}[4]{\int\dvecxi{1}\dvecxi{2}\chi_{#1}({\bf x}_1)\chi_{#2}({\bf x}_1)\frac{1}{r_{12}}\chi_{#3}({\bf x}_2)\chi_{#4}({\bf x}_2)}
+\newcommand{\CCphyseri}[4]{\int\dvecxi{1}\dvecxi{2}\chi^*_{#1}({\bf x}_1)\chi^*_{#2}({\bf x}_2)\frac{1}{r_{12}}\chi_{#3}({\bf x}_1)\chi_{#4}({\bf x}_2)}
+\newcommand{\CCchemeri}[4]{\int\dvecxi{1}\dvecxi{2}\chi^*_{#1}({\bf x}_1)\chi_{#2}({\bf x}_1)\frac{1}{r_{12}}\chi^*_{#3}({\bf x}_2)\chi_{#4}({\bf x}_2)}
 %\newcommand{\aoeri}{\int\drrri{1}\drrri{2}\phi_{\mu}({\bf r}_1)\phi_{\nu}({\bf r}_1)\frac{1}{r_{12}}\phi_{\lambda}({\bf r}_2)\phi_{\sigma}({\bf r}_2)}
-\newcommand{\aoeri}{\xeri{\mu}{\nu}{\lambda}{\sigma}}
 \newcommand{\chemeri}[4]{\left(#1#2\vert #3#4\right)}
-\newcommand{\physeri}[4]{\langle#1#2\vert #3#4\rangle}
+\newcommand{\ceri}[4]{\left(#1#2\vert #3#4\right)}
+\newcommand{\chemspineri}[4]{\left[#1#2\vert #3#4\right]}
+\newcommand{\cseri}[4]{\left[#1#2\vert #3#4\right]}
+\newcommand{\peri}[4]{\langle#1#2\vert #3#4\rangle}
+
+\newcommand{\aoeri}{\ceri{\mu}{\nu}{\lambda}{\sigma}}
 \newcommand{\pqrs}{\left(\mu\nu\vert\lambda\sigma\right)}
 % MP2
+\newcommand{\moeri}{\ceri{i}{a}{j}{b}}
 \newcommand{\iajb}{\left(ia\vert jb\right)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,6 +140,10 @@
 
 \newcommand{\kcal}{$\,$kcal mol$^{-1}\,$}
 \newcommand{\kJ}{$\,$kJ mol$^{-1}\,$}
+\newcommand{\degC}{$^{\circ}$C}
+\newcommand{\degF}{$^{\circ}$F}
+\newcommand{\JpermolK}{~J/mol$\cdot$K~}
+\newcommand{\kJpermolK}{~kJ/mol$\cdot$K~}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Constants
