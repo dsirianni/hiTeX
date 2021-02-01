@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GaTech Theme for Beamer Presentation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Frame Theme %%%%%
+\useoutertheme{infolines}
+\useinnertheme{rounded}
+
+%%%%% Colors %%%%%
+% Georgia Tech Gold and Blue
+\definecolor{URred}{RGB}{153, 0, 0}
+\definecolor{URblue}{RGB}{0, 0, 102}
+
+% Switch to GT colors
+\setbeamercolor{structure}{fg=URred}
+\setbeamercolor{title}{fg=URblue}
+\setbeamercolor{frametitle}{fg=URblue}
+\setbeamercolor{palette primary}{use=structure,fg=white,bg=URred}
+\setbeamercolor{item projected}{fg=URblue}
+
+%%%%% Title Frmme %%%%%
+\pgfdeclareimage[width=\textwidth]{background}{media/gt_template_light_titlebg.pdf}
+
+\setbeamertemplate{title page}[default][right,colsep=-4bp,rounded=true,shadow=\beamer@themerounded@shadow]

@@ -169,6 +169,24 @@ fontsize=\scriptsize,
     }
 }
 
+% UR-Themed Title Frame
+\newcommand{\URtitleframe}{
+    {%
+        \usebackgroundtemplate{%
+            \includegraphics[width=\paperwidth]{/Users/dasirianni/Gits/hiTeX/beamer/themes/media/ur_titlebg.pdf}
+        }
+            {
+            \renewcommand*{\insertshortinstitute}{}
+            \renewcommand*{\insertshorttitle}{}
+            \renewcommand*{\insertshortauthor}{}
+            \renewcommand*{\insertdate}{}
+            \begin{frame}[noframenumbering,plain]
+              \titlepage
+            \end{frame}
+            }
+    }
+}
+
 % Front-End TOC
 \newcommand{\frontTOC}{
     \begin{frame}
