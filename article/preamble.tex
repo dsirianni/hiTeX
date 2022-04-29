@@ -30,6 +30,14 @@
 \usepackage[para,online,flushleft]{threeparttable}
 \usepackage{wrapfig}
 \usepackage{multirow} % Span multiple rows in tables
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[
+    fileext=los,
+    listname={List of Schemes},
+    name=Scheme,
+    placement=tbhp,
+    %within=section, % Uncomment if you want within-section numbering, i.e., 1.1 etc.
+]{scheme}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Blocks

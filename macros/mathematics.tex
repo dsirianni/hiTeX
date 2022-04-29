@@ -62,6 +62,7 @@
 \newcommand{\Hcm}{\widehat{\mathca{H}}}
 
 % General Quantum
+\newcommand{\E}{\mathscr{E}}
 \newcommand{\comm}[2]{[\textbf{#1},\textbf{#2}]}
 \newcommand{\anticomm}[2]{\{\textbf{#1},\textbf{#2}\}}
 \newcommand{\diracd}[2]{\delta\left(#1 - #2\right)}
@@ -76,9 +77,10 @@
 
 % Calculus
 \newcommand{\intR}{\int_{\mathbb{R}}}
-\newcommand{\dx}{\mathrm{d}x\;}
+%% Differentials
 \newcommand{\dvecx}{\mathrm{d}{\bf x}\;}
 \newcommand{\dvecxi}[1]{\mathrm{d}{\bf x}_{#1}\;}
+\newcommand{\dx}{\mathrm{d}x\;}
 \newcommand{\dy}{\mathrm{d}y\;}
 \newcommand{\dz}{\mathrm{d}z\;}
 \newcommand{\dt}{\mathrm{d}t\;}
@@ -89,19 +91,27 @@
 \newcommand{\dwi}[1]{\mathrm{d}\omega_{#1}}
 \newcommand{\dP}{\mathrm{d}P\;}
 \newcommand{\df}[1]{\mathrm{d}#1\;}
+%% d/dx & other fractions etc.
+\newcommand{\ddbydxx}{\frac{\mathrm{d}^2}{\mathrm{d}x^2}}
+\newcommand{\ddbydyy}{\frac{\mathrm{d}^2}{\mathrm{d}y^2}}
+\newcommand{\ddbydzz}{\frac{\mathrm{d}^2}{\mathrm{d}z^2}}
+\newcommand{\ddbydtt}{\frac{\mathrm{d}^2}{\mathrm{d}t^2}}
+\newcommand{\ddbydrr}{\frac{\mathrm{d}^2}{\mathrm{d}r^2}}
 \newcommand{\dfu}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
 \newcommand{\ddfu}[2]{\frac{\mathrm{d}^2#1}{\mathrm{d}#2^2}}
+%% Partial derivatives
 \newcommand{\px}{\frac{\partial}{\partial\, x}}
 \newcommand{\py}{\frac{\partial}{\partial\, y}}
 \newcommand{\pz}{\frac{\partial}{\partial\, z}}
 \newcommand{\pt}{\frac{\partial}{\partial\, t}}
-\newcommand{\pfu}[2]{\frac{\partial\, #1}{\partial\, #2}}
+\newcommand{\pfu}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\ppx}{\frac{\partial^2}{\partial\, x^2}}
 \newcommand{\ppy}{\frac{\partial^2}{\partial\, y^2}}
 \newcommand{\ppz}{\frac{\partial^2}{\partial\, z^2}}
 \newcommand{\ppt}{\frac{\partial^2}{\partial\, t^2}}
 \newcommand{\mixpp}[2]{\frac{\partial^2}{\partial\, #1\partial\,#2}}
 \newcommand{\ppfu}[2]{\frac{\partial^2\, #1}{\partial\, #2^2}}
+\newcommand{\mixppfu}[3]{\frac{\partial^2\, #1}{\partial\, #2\partial\,#3}}
 
 % Matrix & Vector Norms
 \newcommand{\norm}[2]{\| #1\|_{#2}}
@@ -117,22 +127,73 @@
 % Electronic Structure
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Hartree-Fock
+\newcommand{\f}{\hat{f}}
 \newcommand{\feri}[4]{\int\drrri{1}\drrri{2}\phi_{#1}({\bf r}_1)\phi_{#2}({\bf r}_1)\frac{1}{r_{12}}\phi_{#3}({\bf r}_2)\phi_{#4}({\bf r}_2)}
 \newcommand{\spineri}[4]{\int\dvecxi{1}\dvecxi{2}\chi_{#1}({\bf x}_1)\chi_{#2}({\bf x}_1)\frac{1}{r_{12}}\chi_{#3}({\bf x}_2)\chi_{#4}({\bf x}_2)}
 \newcommand{\CCphyseri}[4]{\int\dvecxi{1}\dvecxi{2}\chi^*_{#1}({\bf x}_1)\chi^*_{#2}({\bf x}_2)\frac{1}{r_{12}}\chi_{#3}({\bf x}_1)\chi_{#4}({\bf x}_2)}
 \newcommand{\CCchemeri}[4]{\int\dvecxi{1}\dvecxi{2}\chi^*_{#1}({\bf x}_1)\chi_{#2}({\bf x}_1)\frac{1}{r_{12}}\chi^*_{#3}({\bf x}_2)\chi_{#4}({\bf x}_2)}
+\newcommand{\dferi}[3]{\int\drrri{1}\drrri{2}\chi_{#1}({\bf r}_1)\frac{1}{r_{12}}\phi_{#2}({\bf r}_2)\phi_{#3}({\bf r}_2)}
+\newcommand{\JPQ}{\int\drrri{1}\drrri{2}\chi_{P}({\bf r}_1)\frac{1}{r_{12}}\chi_{Q}({\bf r}_2)}
 %\newcommand{\aoeri}{\int\drrri{1}\drrri{2}\phi_{\mu}({\bf r}_1)\phi_{\nu}({\bf r}_1)\frac{1}{r_{12}}\phi_{\lambda}({\bf r}_2)\phi_{\sigma}({\bf r}_2)}
 \newcommand{\chemeri}[4]{\left(#1#2\vert #3#4\right)}
 \newcommand{\ceri}[4]{\left(#1#2\vert #3#4\right)}
+\newcommand{\dferib}[3]{\left(#1#2\vert #3\right)} % (#1 #1 | #3)
+\newcommand{\dferik}[3]{\left(#1\vert #2#3\right)} % (#1 | #2 #3)
 \newcommand{\chemspineri}[4]{\left[#1#2\vert #3#4\right]}
 \newcommand{\cseri}[4]{\left[#1#2\vert #3#4\right]}
 \newcommand{\peri}[4]{\langle#1#2\vert #3#4\rangle}
+\newcommand{\asymperi}[4]{\bra{#1#2}\ket{#3#4}}
+\newcommand{\asymcheri}[4]{\left[#1#2\vert\vert #3#4\right]}
 
 \newcommand{\aoeri}{\ceri{\mu}{\nu}{\lambda}{\sigma}}
 \newcommand{\pqrs}{\left(\mu\nu\vert\lambda\sigma\right)}
+\newcommand{\prqs}{\left(\mu\lambda\vert\nu\sigma\right)}
+\newcommand{\pqP}{\left(\mu\nu\vert P\right)}
+\newcommand{\Qrs}{\left(Q\vert \lambda\sigma\right)}
+\newcommand{\tpqP}{\widetilde{\left(\mu\nu\vert P\right)}}
+\newcommand{\tQrs}{\widetilde{\left(Q\vert \lambda\sigma\right)}}
+\newcommand{\Jm}{\left[{\bf J}^{-1}\right]_{PQ}}
+\newcommand{\Jmhalf}{\left[{\bf J}^{-\frac{1}{2}}\right]_{PQ}}
+
+% Matrix elements
+\newcommand{\Fpq}{F_{\mu\nu}}
+\newcommand{\Hpq}{H^{\rm core}_{\mu\nu}}
+\newcommand{\Jpq}{J\left[D_{\lambda\sigma}\right]_{\mu\nu}}
+\newcommand{\Kpq}{K\left[D_{\lambda\sigma}\right]_{\mu\nu}}
+\newcommand{\Spq}{S_{\mu\nu}}
+\newcommand{\Dpq}{D_{\mu\nu}}
+\newcommand{\Drs}{D_{\lambda\sigma}}
+\newcommand{\Cri}{C_{\lambda i}}
+\newcommand{\Csi}{C_{\sigma i}}
+
 % MP2
 \newcommand{\moeri}{\ceri{i}{a}{j}{b}}
+\newcommand{\Cpi}{C_{\mu i}}
+\newcommand{\Cqa}{C_{\nu a}}
+\newcommand{\Crj}{C_{\lambda j}}
+\newcommand{\Csb}{C_{\sigma b}}
 \newcommand{\iajb}{\left(ia\vert jb\right)}
+
+% CI & CC
+\newcommand{\T}{\hat{T}}
+\newcommand{\Tone}{\hat{T_1}}
+\newcommand{\Ttwo}{\hat{T_2}}
+\newcommand{\Tthree}{\hat{T_3}}
+\newcommand{\cluster}[1]{e^{#1}}
+\newcommand{\clusterT}{e^{\T}}
+\newcommand{\clusterTone}{e^{\Tone}}
+\newcommand{\clusterTtwo}{e^{\Tone + \Ttwo}}
+\newcommand{\clusterTthree}{e^{\Tone + \Ttwo + \Tthree}}
+\newcommand{\tia}{t_i^a}
+\newcommand{\tjb}{t_j^b}
+\newcommand{\tiajb}{t_{ij}^{ab}}
+\newcommand{\tjbkc}{t_{jk}^{bc}}
+\newcommand{\tkcld}{t_{kl}^{cd}}
+
+\newcommand{\vac}{\ket{}}
+
+% SAPT
+\newcommand{\dHF}{\delta^{(2)}_{\rm HF}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Units

@@ -1,0 +1,214 @@
+%%
+%%
+%% NSF requires minimum of 10pt font with margins on all sides of at least
+%% 2.5cm.  No more than 15 characters (including spaces) per 2.5cm (avg).
+%% No more than 6 lines of type w/in a vertical space of 2.5cm.
+%%
+%%
+
+\documentclass[12pt]{article}
+\usepackage{epsfig}
+%\usepackage{html}
+% citesort seems obsolete now
+%\usepackage{citesort}
+\usepackage{overcite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{wrapfig}
+\usepackage{threeparttable}
+%\usepackage[normal,footnotesize]{caption}
+\usepackage[normal,footnotesize]{}
+\usepackage{amssymb}
+\usepackage{xcolor}
+
+\setlength{\topmargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\headheight}{0cm}
+\setlength{\marginparwidth}{0cm}
+\setlength{\marginparpush}{0pt}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.7in}
+\setlength{\footskip}{20pt}
+\addtolength{\abovecaptionskip}{-3mm}
+\parskip 3pt
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\setcounter{secnumdepth}{4} \renewcommand{\thesubsection}{\Alph{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+\subsection*{Project Description}
+
+\subsubsection{Results from Prior NSF Support}
+
+{\bf Intellectual Merit:} \\
+
+[[ Broad-strokes overview of research program, 1 paragraph ]]\\
+
+\paragraph{Specific Aim 1}
+
+[[ Several paragraphs on one specific aim of the research program ]]\\
+
+\paragraph{Specific Aim 2}
+
+[[ Several paragraphs on one specific aim of the research program ]]\\
+
+\paragraph{Specific Aim 3}
+
+[[ Several paragraphs on one specific aim of the research program ]]\\
+
+\vspace*{-4mm} \paragraph{Broader Impacts.}
+
+[[ 2-3 paragraph statement of broader impacts of research program ]]\\
+
+%% Example: David's broader impacts from 2019 proposal
+% Computational simulations have joined theory and experiment as one of the
+% primary modes of scientific discovery.\cite{DOE:1999} With our collaborators,
+% we have released {\sc Psi4}, a fully open-source quantum chemistry code with a
+% wide variety of features.\cite{Turney:PSI4, Parrish:2017:3185}  The code is
+% efficient for most tasks, works well on multi-core machines, and is built on a
+% modular infrastructure designed to make it easy to incorporate new theoretical
+% advances and algorithms.  Much of the code was re-written to take advantage of
+% density fitting algorithms, resulting in very fast Hartree--Fock, DFT, MP2,
+% SAPT, and CCSD(T) codes.  We have placed a major emphasis on interoperability,
+% designing the code to be easy to interface with, and writing interfaces to
+% numerous quantum chemistry libraries and modules developed by
+% others.\cite{Parrish:2017:3185} We have also emphasized user-friendliness and
+% automation of common tasks.  Indeed, a user can invoke a focal-point,
+% counterpoise-corrected, or complete-basis-set extrapolated computations with a
+% single line of input.  {\sc Psi4} has been downloaded more than 102,000 times
+% as of the end of 2018 (more than half these downloads are from 2018).  The two
+% {\sc Psi4} papers \cite{Turney:PSI4, Parrish:2017:3185} have more than 860
+% citations between them.  In 2018, we released {\sc
+% Psi4NumPy},\cite{Smith:2018:3504} an interface making it much easier to rapidly
+% develop quantum chemistry code, using a programmer-friendly Python/NumPy
+% environment undergirded by the {\sc Psi4} libraries.
+% 
+% Prior NSF funding of our research program has contributed to the training of
+% numerous undergraduates, graduate students, postdocs, and visiting faculty.
+% Graduate students from the group have won awards including NSF and DOE graduate
+% fellowships, the Foresight Institute Nanotechnology Student of the Year Award,
+% and the Iota Sigma Pi Anna Louise Hoffman Award.  Group alumni include Prof.
+% Eugene DePrince (Florida State University), Prof. Ashley Ringer McDonald
+% (CalPoly), Prof. Edward Valeev (Virginia Tech), Prof. Mutasem Sinnokrot
+% (Khalifa University).
+% 
+% NSF funding has also continued to support the PI's educational efforts
+% to make quantum chemistry more accessible to students.  His web
+% notes and YouTube videos on quantum chemistry continue to be popular.
+% The PI has created the {\sc Psi4}Education
+% consortium,\cite{Fortenberry:2015:PSI4Education} consisting primarily
+% of faculty at small colleges, to develop a series of computational
+% chemistry laboratory modules that all use free software (primarily
+% {\sc Psi4} and WebMO as its graphical front-end).
+
+\subsubsection{Proposed Research}
+
+\paragraph{Project Goals.}
+
+[[ 1 paragraph statement of proposed research goals, broadly ]]\\
+
+\paragraph{Project 1 Overview}
+
+[[ Several paragraph description of preliminary results \& proposed work
+towards completion of proposed Project 1 ]]\\
+
+\paragraph{Project 2 Overview}
+
+[[ Several paragraph description of preliminary results \& proposed work
+towards completion of proposed Project 2 ]]\\
+
+{\em Project 2 subheading} This is where a specific detail is expanded upon
+for Project 2\\
+
+{\em Challenge 1: Something something} This is where a particular challenge
+that will be addressed by the proposal is expanded upon.
+%% Figures should accompany these projects, and be included via wrapfigure
+%\begin{wrapfigure}{r}{0.33\textwidth}
+%\includegraphics[scale=0.65]{multitarget_plot.png}
+%\caption{\small{Validation errors of BPNNs trained on SSI and
+%configurations of 128 H-bonded dimers.
+%}
+%\label{fig:multitarget_plot}
+%}
+
+\paragraph{Project 3 Overview}
+
+[[ Several paragraph description of preliminary results \& proposed work
+towards completion of proposed Project 3 ]]\\
+
+\vspace*{-4mm} \paragraph{Broader Impacts of the Proposed Work.}
+
+%% David's proposed broader impacts from 2019 NSF prop
+% The proposed methods development work will assist in the training of
+% young researchers who will be capable of creating the next wave of
+% computational tools.  Improved SAPT models will be folded into the
+% {\sc Psi4} package, developed by us and our collaborators as free,
+% open-source software.  {\sc Psi4} has been growing rapidly in popularity
+% among both users and developers, with the SAPT capabilities developed at
+% Georgia Tech being a key feature.  Pure-ML and force-field models will
+% be released as stand-alone, open-source packages.  The proposed
+% developments will provide the computational chemistry community a
+% powerful new set of tools for computing intermolecular interactions
+% reliably and with unprecedented speed.
+% 
+% Based on positive feedback from students, the PI proposes to create new and
+% updated YouTube videos on quantum chemistry, including an ``Introduction
+% to Quantum Chemistry'' video,
+% and an introduction to the basics of SAPT for students and computational
+% chemists not familiar with the method or software.  The PI also proposes
+% to continue to develop and organize a series of successful summer
+% ``bootcamps'' in data science.  He has organized two 10-hour bootcamps
+% for Georgia Tech graduate students, drawn from all disciplines, with the
+% time split between lecture and hands-on activities.  During summer 2019,
+% he organized a more intensive, 22-hour bootcamp for 80 students drawn
+% from Georgia Tech, Morehouse, Spelman, Agnes Scott, and Kennesaw State,
+% again organized as a mix of lecture and hands-on activities.  84\% of
+% the respondents to the post-bootcamp survey said they planned to use the
+% material they learned in their own education and research projects. The
+% PI described some of his group's work in machine learning and chemistry
+% during the final, ``domain day'' of the bootcamp, and several students
+% indicated in the assessment surveys that this was their favorite topic.
+% The current proposal would provide the PI much additional material from
+% which he could illustrate domain applications in the bootcamp.
+% 
+% Because undergraduates rarely have significant exposure to theoretical
+% chemistry, funds are requested for one undergraduate researcher to
+% assist with the proposed work.  Undergraduate research experiences can
+% be very helpful in attracting students to theoretical chemistry (this
+% was the case for the PI), and undergraduate researchers from our group
+% have gone on to join chemistry PhD programs at universities including
+% UT Austin, Cornell, U.~Georgia, Berkeley,
+% Emory, and Notre Dame.  Former undergraduates Ryan
+% Steele and Ryan Lively are now faculty members in Chemistry at Utah,
+% and in Chemical Engineering at Georgia Tech, respectively.
+% Brazilian exchange student Leonardo dos Anjos Cunha worked with
+% the Sherrill group from 2015-2016
+% and is now a graduate student in the Head-Gordon
+% group at Berkeley.  German exchange student Marvin Lechner worked
+% with the group in 2016 and is now a graduate student in the group of
+% Frank Neese at the University of Bonn.  Undergraduate Nick Petosa is
+% now earning a master's degree in Computer Science at Georgia Tech.
+% Undergraduate Mike Zott won a poster award at the 2017 meeting of the
+% Southeastern Theoretical Chemistry Association (SETCA) in 2017, and
+% is now a graduate student in Chemistry at CalTech.  We will continue
+% providing such educational opportunities in the renewal period.
+
+
+%%% Bibliography %%%
+\newpage
+\setcounter{page}{1}
+\bibliographystyle{nsf}
+%\bibliography{jrncodes,mainbib-ds}
+\bibliography{refs}
+
+\end{document}
+
+
+
