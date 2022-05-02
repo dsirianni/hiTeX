@@ -34,16 +34,34 @@
 \newcommand{\mA}{\mathcal{A}}
 \newcommand{\mB}{\mathcal{B}}
 \newcommand{\mC}{\mathcal{C}}
+\newcommand{\mAB}{\mathcal{AB}}
+\newcommand{\mBC}{\mathcal{BC}}
+\newcommand{\mAC}{\mathcal{AC}}
+\newcommand{\mABC}{\mathcal{ABC}}
+\newcommand{\AdB}{\mathcal{A}\cdots\mathcal{B}}
+\newcommand{\AdC}{\mathcal{A}\cdots\mathcal{C}}
+\newcommand{\BdC}{\mathcal{B}\cdots\mathcal{C}}
 
 % Computational Scaling
 \newcommand{\compscale}[1]{\mathcal{O}(#1)}
 
 % Chemistry 
 \newcommand*{\plimsoll}{{\ensuremath{-\kern-4pt{\ominus}\kern-4pt-}}}
-\newcommand{\aq}{$_{({aq})}$}
-\newcommand{\s}{$_{({s})}$}
-\newcommand{\liq}{$_{({l})}$}
-\newcommand{\g}{$_{({g})}$}
+\newcommand{\taq}{$_{({aq})}$}
+\newcommand{\ts}{$_{({s})}$}
+\newcommand{\tliq}{$_{({l})}$}
+\newcommand{\tg}{$_{({g})}$}
+\newcommand{\aq}{_{({aq})}}
+\newcommand{\s}{_{({s})}}
+\newcommand{\liq}{_{({l})}}
+\newcommand{\g}{_{({g})}}
+
+% Enthalpy, Entropy, & Free Energies of Binding/Solvation
+\newcommand{\dGbindgasAB}{\Delta G_{gas}^{\rm bind}({\cal AB})}
+\newcommand{\dGbindsolvAB}{\Delta G_{solv}^{\rm bind}({\cal AB})}
+\newcommand{\dGsolvA}{\Delta G_{solv}({\cal A})}
+\newcommand{\dGsolvB}{\Delta G_{solv}({\cal A})}
+\newcommand{\dGsolvAB}{\Delta G_{solv}({\cal AB})}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Subject-Specific
@@ -59,10 +77,56 @@
 \newcommand{\adjoint}[1]{#1\supd}
 \newcommand{\Hhat}{\widehat{H}}
 \newcommand{\Hqm}{\widehat{\mathscr{H}}}
+\newcommand{\Htot}{\widehat{\mathscr{H}}_{\rm tot}}
+\newcommand{\Hmolec}{\widehat{\mathscr{H}}_{\rm molec}}
+\newcommand{\Helec}{\widehat{\mathscr{H}}_{\rm elec}}
+\newcommand{\Hnuc}{\widehat{\mathscr{H}}_{\rm nuc}}
 \newcommand{\Hcm}{\widehat{\mathca{H}}}
+\newcommand{\Hmat}{\underline{\underline{\bf H}}}
+\newcommand{\E}{\mathscr{E}}
+\newcommand{\Eelec}{\mathscr{E}_{\rm elec}}
+\newcommand{\Etot}{\mathscr{E}_{\rm tot}}
+\newcommand{\Te}{\hat{T}_{e}}
+\newcommand{\TN}{\hat{T}_{N}}
+\newcommand{\Vee}{\hat{V}_{ee}}
+\newcommand{\VeN}{\hat{V}_{eN}}
+\newcommand{\VNN}{\hat{V}_{NN}}
+\newcommand{\vx}{\hat{v}_{\rm ext}}
+\newcommand{\vKS}{\hat{v}_{\rm KS}}
+
+%% Rayleigh-Schrodinger Perturbation Theory
+\newcommand{\Hzero}{\widehat{H}^{(0)}}
+\newcommand{\Hone}{\widehat{H}^{(1)}}
+\newcommand{\Htwo}{\widehat{H}^{(2)}}
+\newcommand{\Hk}{\widehat{H}^{(k)}}
+\newcommand{\Vhat}{\widehat{V}}
+\newcommand{\En}{\mathscr{E}_n}
+\newcommand{\Ezero}{\mathscr{E}_n^{(0)}}
+\newcommand{\Ezerozero}{\mathscr{E}_0^{(0)}}
+\newcommand{\Ezerom}{\mathscr{E}_m^{(0)}}
+\newcommand{\Eone}{\mathscr{E}_n^{(1)}}
+\newcommand{\Eonezero}{\mathscr{E}_0^{(1)}}
+\newcommand{\Etwo}{\mathscr{E}_n^{(2)}}
+\newcommand{\Etwozero}{\mathscr{E}_0^{(2)}}
+\newcommand{\Ek}{\mathscr{E}_n^{(k)}}
+\newcommand{\Psin}{\ket{\Psi_n}}
+\newcommand{\Psizero}{\ket{\Psi_n^{(0)}}}
+\newcommand{\Psizerom}{\ket{\Psi_m^{(0)}}}
+\newcommand{\Psione}{\ket{\Psi_n^{(1)}}}
+\newcommand{\Psionem}{\ket{\Psi_m^{(1)}}}
+\newcommand{\Psitwo}{\ket{\Psi_n^{(2)}}}
+\newcommand{\Psik}{\ket{\Psi_n^{(k)}}}
+\newcommand{\psizero}{\Psi_n^{(0)}}
+\newcommand{\psizerom}{\Psi_m^{(0)}}
+\newcommand{\psione}{\Psi_n^{(1)}}
+\newcommand{\psionem}{\Psi_m^{(1)}}
+\newcommand{\psitwo}{\Psi_n^{(2)}}
+\newcommand{\psik}{\Psi_n^{(k)}}
+\newcommand{\psif}[1]{\Psi_n^{(#1)}}
 
 % General Quantum
-\newcommand{\E}{\mathscr{E}}
+\newcommand{\Schrod}{Schr\"odinger~}
+\newcommand{\schrod}{Schr\"odinger~}
 \newcommand{\comm}[2]{[\textbf{#1},\textbf{#2}]}
 \newcommand{\anticomm}[2]{\{\textbf{#1},\textbf{#2}\}}
 \newcommand{\diracd}[2]{\delta\left(#1 - #2\right)}
@@ -71,9 +135,12 @@
 \newcommand{\bracket}[2]{\langle\, #1\, \vert\, #2\,\rangle}
 \newcommand{\ketbra}[2]{\vert\, #1\,\rangle\langle\,#2\,\vert}
 \newcommand{\braoket}[3]{\langle\,#1\,\vert\, #2\,\vert\, #3\,\rangle}
+\newcommand{\chembraoket}[3]{[\,#1\,\vert\, #2\,\vert\, #3\,]}
+\newcommand{\parenbraoket}[3]{(\,#1\,\vert\, #2\,\vert\, #3\,)}
 \newcommand{\Mij}[3]{\langle\, #1\, \vert\, #2\, \vert\, #3\, \rangle}
 \newcommand{\proj}[1]{\sum_{#1}\ketbra{#1}{#1}}
 \newcommand{\projAtoB}[2]{\proj{#2}\,#1\,\rangle}
+\newcommand{\E}{\mathscr{E}}
 
 % Calculus
 \newcommand{\intR}{\int_{\mathbb{R}}}
