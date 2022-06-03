@@ -121,12 +121,38 @@ frame=lines,
 framesep=2mm,
 baselinestretch=1.2,
 bgcolor=codegrey,
-fontsize=\scriptsize,
+fontsize=\small,
+linenos}
+
+% Formats bash code with Minted
+\newminted{bash}{%
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+bgcolor=codegrey,
+fontsize=\small,
+linenos}
+
+% Formats text code with Minted
+\newminted{text}{%
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+bgcolor=codegrey,
+fontsize=\small,
 linenos}
 
 \newenvironment{mintypython}
 {\VerbatimEnvironment\begin{center}\begin{minipage}{\textwidth}\begin{pythoncode}}
 {\end{pythoncode}\end{minipage}\end{center}}
+
+\newenvironment{mintybash}
+{\VerbatimEnvironment\begin{center}\begin{minipage}{\textwidth}\begin{bashcode}}
+{\end{bashcode}\end{minipage}\end{center}}
+
+\newenvironment{mintytxt}
+{\VerbatimEnvironment\begin{center}\begin{minipage}{\textwidth}\begin{textcode}}
+{\end{textcode}\end{minipage}\end{center}}
 
 %\renewcommand*\listingscaption{Code Snippet}
 %\renewcommand*\listoflistingscaption{List of Code Snippets}
