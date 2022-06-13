@@ -122,6 +122,7 @@ framesep=2mm,
 baselinestretch=1.2,
 bgcolor=codegrey,
 fontsize=\small,
+escapeinside=||,
 linenos}
 
 % Formats bash code with Minted
@@ -140,6 +141,7 @@ framesep=2mm,
 baselinestretch=1.2,
 bgcolor=codegrey,
 fontsize=\small,
+escapeinside=||,
 linenos}
 
 \newenvironment{mintypython}
@@ -156,6 +158,10 @@ linenos}
 
 %\renewcommand*\listingscaption{Code Snippet}
 %\renewcommand*\listoflistingscaption{List of Code Snippets}
+
+\newcommand{\mtxt}[1]{\mintinline{text}{#1}}
+\newcommand{\mpy}[1]{\mintinline{python}{#1}}
+\newcommand{\mbash}[1]{\mintinline{bash}{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % List Options
@@ -193,7 +199,7 @@ linenos}
 \bibliographystyle{unsrt}
 \usepackage[superscript]{cite}
 %% The next two packages must be loaded in this order for footnote links to work!!
-\usepackage[bottom]{footmisc} % Footnotes at the bottom
+\usepackage[stable,bottom]{footmisc} % Footnotes at the bottom
 \usepackage{hyperref}  % for hyperlinks in doc. Remember...load after footmisc!
 
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
