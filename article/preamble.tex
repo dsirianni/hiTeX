@@ -38,6 +38,7 @@
     placement=tbhp,
     %within=section, % Uncomment if you want within-section numbering, i.e., 1.1 etc.
 ]{scheme}
+\usepackage{pdfpages}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Blocks
@@ -167,14 +168,37 @@ linenos}
 % List Options
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{eqparbox} % Descriptions with uniform delim widths based on longest
 \usepackage[shortlabels]{enumitem} % Enumerate with different delimiters
+\usepackage{etoolbox} %% <- for \AtBeginEnvironment
 
-% Tighten up enumerate
-\setlist[enumerate]{nolistsep}
+% Tighten up enumerate, itemize, & description environments
+\setlist[enumerate]{noitemsep}
+\setlist[itemize]{noitemsep}
+\setlist[description]{noitemsep}
+
+% Make a new description env for uniform delim widths
+\newcounter{uniformdescription}
+\AtBeginEnvironment{uniformdescription}{%
+  \stepcounter{uniformdescription}%
+  \edef\EnumitemId{\arabic{uniformdescription}}%
+}
+\newlist{uniformdescription}{description}{10}
+\setlist[uniformdescription]{
+    labelwidth=\eqboxwidth{listlabel@\EnumitemId},
+    leftmargin=!,
+    format=\uniformdescriptionlabel,
+    noitemsep
+}
+\newcommand\uniformdescriptionlabel[2][l]{\eqmakebox[listlabel@\EnumitemId][#1]{#2}}
+
+% Set default item delimiters for enumerate
 %\setlist[enumerate,1]{nolistsep}
-\setlist[enumerate,1]{label=(\roman*),align=left}
+\setlist[enumerate,1]{label=\arabic*.,align=left}
 %\setlist[enumerate,2]{nolistsep}
-\setlist[enumerate,2]{label=(\alph*),align=left}
+\setlist[enumerate,2]{label=\alph*.,align=left}
+
+\SetEnumitemKey{margin}{leftmargin={\widthof{#1}+2em}}
 
 % Add outline package, redefine delimiters
 \usepackage{outlines}
@@ -215,3 +239,34 @@ linenos}
 \usepackage{blindtext} % Lorem ipsum etc. for testing. Call w/ `\blindtext[x]` for x repetitions
 \newcommand{\lorem}[1]{\blindtext[#1]}
 \usepackage[version=4]{mhchem}
+\usepackage{mmap}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright Notices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\ccbyncsa{%
+\begin{minipage}{0.2\textwidth}
+\begin{center}
+\includegraphics[width=\linewidth]{/Users/dasirianni/Gits/hiTeX/media/logos/licenses/cc-by-nc-sa.png}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.78\textwidth}
+\copyright\ Dominic A. Sirianni, Ph.D. 2022\\
+{\scriptsize This work is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy
+of this license, visit \url{http://creativecommons.org/licenses/by-nc-sa/4.0/}
+or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042,
+USA.}
+\end{minipage}
+\begin{center}
+\end{center}}
+
+
+\newcommand\copyrightnotice[1]{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south,yshift=5pt] at (current page.south) {\parbox{\dimexpr\textwidth-\fboxsep-\fboxrule\relax}{#1}};
+\end{tikzpicture}%
+}
+

@@ -78,8 +78,8 @@
 %\newcommand{\Ih}{I_h}
 
 % Schoenflies symbols
-\newcommand{\Schoen}[4]{#1 ^{#2}#3_{#4}
-\newcommand{\schoen}[2]{#1_{#2}
+\newcommand{\Schoen}[4]{#1 ^{#2}#3_{#4}}
+\newcommand{\schoen}[2]{#1_{#2}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Subject-Specific
@@ -111,6 +111,8 @@
 \newcommand{\VNN}{\hat{V}_{NN}}
 \newcommand{\vx}{\hat{v}_{\rm ext}}
 \newcommand{\vKS}{\hat{v}_{\rm KS}}
+\newcommand{\Ssq}{\hat{S}^2}
+\newcommand{\Ssqexp}{\langle\,\hat{S}^2\,\rangle}
 
 %% Rayleigh-Schrodinger Perturbation Theory
 \newcommand{\Hzero}{\widehat{H}^{(0)}}
@@ -159,10 +161,11 @@
 \newcommand{\proj}[1]{\sum_{#1}\ketbra{#1}{#1}}
 \newcommand{\projAtoB}[2]{\proj{#2}\,#1\,\rangle}
 \newcommand{\E}{\mathscr{E}}
+\newcommand{\expectation}[1]{\langle\,\widehat{#1}\,\rangle}
 
 % Calculus
 \newcommand{\intR}{\int_{\mathbb{R}}}
-%% Differentials
+%% Exact Differentials
 \newcommand{\dvecx}{\mathrm{d}{\bf x}\;}
 \newcommand{\dvecxi}[1]{\mathrm{d}{\bf x}_{#1}\;}
 \newcommand{\dx}{\mathrm{d}x\;}
@@ -174,8 +177,25 @@
 \newcommand{\drrri}[1]{\mathrm{d}{\bf r}^3_{#1}\;}
 \newcommand{\dw}{\mathrm{d}\omega}
 \newcommand{\dwi}[1]{\mathrm{d}\omega_{#1}}
-\newcommand{\dP}{\mathrm{d}P\;}
+\newcommand{\dP}{\mathrm{d}P}
+\newcommand{\dV}{\mathrm{d}V}
+\newcommand{\dT}{\mathrm{d}T}
+\newcommand{\dU}{\mathrm{d}U}
+\newcommand{\dH}{\mathrm{d}H}
+\newcommand{\dS}{\mathrm{d}S}
+\newcommand{\dG}{\mathrm{d}G}
 \newcommand{\df}[1]{\mathrm{d}#1\;}
+%% Inexact Differentials
+\newcommand{\dbar}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}}
+\newcommand{\db}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}}
+\newcommand{\dbq}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}q}
+\newcommand{\dbqirrev}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}q_{\rm irrev}}
+\newcommand{\dbqrev}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}q_{\rm rev}}
+\newcommand{\dbw}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}w}
+\newcommand{\dbwirrev}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}w_{\rm irrev}}
+\newcommand{\dbwrev}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}w_{\rm rev}}
+\newcommand{\dbx}{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}x}
+\newcommand{\dbu}[1]{{{\rm d\mkern-8mu\mathchar'26\mkern-1mu}}#1}
 %% d/dx & other fractions etc.
 \newcommand{\ddbydxx}{\frac{\mathrm{d}^2}{\mathrm{d}x^2}}
 \newcommand{\ddbydyy}{\frac{\mathrm{d}^2}{\mathrm{d}y^2}}
@@ -190,6 +210,7 @@
 \newcommand{\pz}{\frac{\partial}{\partial\, z}}
 \newcommand{\pt}{\frac{\partial}{\partial\, t}}
 \newcommand{\pfu}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\thermopfu}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
 \newcommand{\ppx}{\frac{\partial^2}{\partial\, x^2}}
 \newcommand{\ppy}{\frac{\partial^2}{\partial\, y^2}}
 \newcommand{\ppz}{\frac{\partial^2}{\partial\, z^2}}

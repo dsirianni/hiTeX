@@ -3,13 +3,17 @@
 \input{/Users/dasirianni/Gits/hiTeX/macros/inline-references}
 \input{/Users/dasirianni/Gits/hiTeX/macros/theorem-environments}
 
-\lhead{D. A. Sirianni}
-\rhead{Article Template}
-\title{Article Template}
+\pagestyle{fancy}
+\lhead{Short Author/Info}
+\rhead{Short Title}
+\cfoot{\copyright\ Dominic A. Sirianni, Ph.D. {\color{red}<year-or-range>}}
+\title{Article Title}
 \author{D. A. Sirianni, PhD}
 \date{\today}
 \begin{document}
 \maketitle
+\footnotetext{\copyrightnotice{\ccbyncsa}}
+\thispagestyle{empty}
 
 \blindtext[5]
 
@@ -17,5 +21,4 @@
 \addcontentsline{toc}{section}{References}  %add References section to Table of Contents
 
 \end{document}
-
 
