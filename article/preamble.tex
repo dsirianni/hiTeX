@@ -30,6 +30,11 @@
 \usepackage[para,online,flushleft]{threeparttable}
 \usepackage{wrapfig}
 \usepackage{multirow} % Span multiple rows in tables
+\usepackage{tabularx} % For variable width, text-wrapped table cells
+% Fully justified & wrapped: column type X
+\newcolumntype{L}{>{\raggedright\arraybackslash}X} % Variable width, left justified
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X} % Variable width, right justified
+\newcolumntype{C}{>{\centering\arraybackslash}X} % Variable width, centered text
 \usepackage{newfloat}
 \DeclareFloatingEnvironment[
     fileext=los,
@@ -43,6 +48,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Blocks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage{tcolorbox}
 \usepackage{lipsum}
 \tcbuselibrary{skins,breakable}
@@ -70,6 +76,8 @@
     colbacklower=DarkBlue!75!LightBlue,%
     title=#1]}%
     {\endtcolorbox}
+
+\newcommand{\eol}{$\,$\\}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mathematics
