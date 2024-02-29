@@ -53,7 +53,7 @@
     colback=LightGreen,colframe=DarkGreen,%
     colbacklower=LimeGreen!75!LightGreen,%
     title=#1]}%
-    {\endtcolorbox}
+    {\endtcolorbox}{}{}
 
 \newenvironment{alertblock}[1]{%
     \tcolorbox[beamer,%
@@ -61,7 +61,7 @@
     colback=LightCoral,colframe=DarkRed,%
     colbacklower=Tomato!75!LightCoral,%
     title=#1]}%
-    {\endtcolorbox}
+    {\endtcolorbox}{}{}
 
 \newenvironment{block}[1]{%
     \tcolorbox[beamer,%
@@ -69,7 +69,7 @@
     colback=LightBlue,colframe=DarkBlue,%
     colbacklower=DarkBlue!75!LightBlue,%
     title=#1]}%
-    {\endtcolorbox}
+    {\endtcolorbox}{}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mathematics
@@ -147,15 +147,15 @@ linenos}
 
 \newenvironment{mintypython}
 {\VerbatimEnvironment\begin{center}\begin{minipage}{\textwidth}\begin{pythoncode}}
-{\end{pythoncode}\end{minipage}\end{center}}
+{\end{pythoncode}\end{minipage}\end{center}}{}
 
 \newenvironment{mintybash}
 {\VerbatimEnvironment\begin{center}\begin{minipage}{\textwidth}\begin{bashcode}}
-{\end{bashcode}\end{minipage}\end{center}}
+{\end{bashcode}\end{minipage}\end{center}}{}
 
 \newenvironment{mintytxt}
 {\VerbatimEnvironment\begin{center}\begin{minipage}{\textwidth}\begin{textcode}}
-{\end{textcode}\end{minipage}\end{center}}
+{\end{textcode}\end{minipage}\end{center}}{}
 
 %\renewcommand*\listingscaption{Code Snippet}
 %\renewcommand*\listoflistingscaption{List of Code Snippets}
@@ -253,7 +253,7 @@ linenos}
 \end{minipage}
 \hfill
 \begin{minipage}{0.78\textwidth}
-\copyright\ Dominic A. Sirianni, Ph.D. 2022--2023\\
+\copyright\ Dominic A. Sirianni, Ph.D. 2022--2024\\
 {\scriptsize This work is licensed under the Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy
 of this license, visit \url{http://creativecommons.org/licenses/by-nc-sa/4.0/}
