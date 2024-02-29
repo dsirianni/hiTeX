@@ -1,0 +1,52 @@
+%%
+%% Proposal format adapted from CDS's 2019 NSF proposal.
+%% PRF Requirements: 1 in margins, 12 pt font, double-spaced, pages #'ed
+%% Refs formatted in ACS style w/ achemso.bst copied from hiTeX repo
+
+% Preamble
+\documentclass[12pt]{article}
+\usepackage{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{overcite}
+\usepackage{achemso}                % Needed for proper bib entry formatting (article titles)
+\setkeys{acs}{maxauthors = 0}       % Needed for proper bib entry formatting (article titles)
+\setkeys{acs}{articletitle = true}  % Needed for proper bib entry formatting (article titles)
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{wrapfig}
+\usepackage{threeparttable}
+%\usepackage[normal,footnotesize]{caption}
+\usepackage[normal,footnotesize]{}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{setspace}
+\doublespace
+\usepackage{sectsty}
+\allsectionsfont{\singlespacing}
+\usepackage{titlesec}
+\titlespacing{\section}{0em}{0em}{0em}
+\titlespacing{\subsection}{0em}{0em}{-1em}
+\titlespacing{\subsubsection}{0em}{0em}{-1em}
+\titlespacing{\paragraph}{0em}{-1em}{1em}
+\titleformat*{\subparagraph}{\itshape}
+\titlespacing{\subparagraph}{\parindent}{0em}{1em}
+\setlength{\topmargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\headheight}{0cm}
+\setlength{\marginparwidth}{0cm}
+\setlength{\marginparpush}{0pt}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.7in}
+\setlength{\footskip}{20pt}
+\addtolength{\abovecaptionskip}{-3mm}
+%\setlength{\parindent}{0pt}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
