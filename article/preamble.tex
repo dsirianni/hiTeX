@@ -228,6 +228,10 @@ linenos}
 % Bibliography, References, Footnotes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% To cite using ACS style, uncomment following two lines & comment out unsrt
+%\usepackage[sort&compress,numbers,super]{natbib}
+%\bibliographystyle{achemso}
+% To cite using a general style, uncomment next line
 \bibliographystyle{unsrt}
 \usepackage[superscript]{cite}
 %% The next two packages must be loaded in this order for footnote links to work!!
@@ -243,6 +247,8 @@ linenos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[T1]{fontenc}
+\usepackage{calligra} % Gives a signature font
+\newcommand{\setfont}[2]{{\fontfamily{#1}\selectfont #2}} % \setfont{font-name}{text to change font}
 \usepackage{color}
 \usepackage{blindtext} % Lorem ipsum etc. for testing. Call w/ `\blindtext[x]` for x repetitions
 \newcommand{\lorem}[1]{\blindtext[#1]}
