@@ -195,6 +195,46 @@
         % 6: Place:
         % 7: Award Title
 
+%\newcommand{\AIPConfPresWithEditor}[10]{
+%    \noindent #1, #2. In: {\em #3: Proceedings of the #4, #5}, Ed. by #6. (#7, #8. #9), #10.
+%    }
+    % 1: Presentation authors, presenting author underlined
+    % 2: Presentation title
+    % 3: Title of collected work
+        % Example (Presentation at ACS): #3 = {Book of Abstracts}
+    % 4: Name of Meeting
+        % Example (Presentation at ACS): #4 = {Spring 2024 National Meeting of the American Chemical Society}
+        % Example (MERCURY): #4 = {22$^{\rm nd}$ MERCURY Conference on Computational Chemistry}
+    % 5: Location and Date of Conference
+        % Example (ACS Spring 2024): #5 = {New Orleans, LA, USA, March 17-21 2024}
+    % 6: Conference proceedings editor (same name format as authors)
+    % 7: Publisher
+        % Example (ACS): #7 = {ACS Publishing}
+    % 8: Place of Publication
+        % Example (ACS): #8 = {Washington, DC}
+    % 9: Year of Publication (same as year of presentation)
+    % 10: Presentation number/Paper ID
+        % Example (ACS): #10 = {\#3979135}
+
+\newcommand{\AIPConfPres}[9]{
+    \noindent #1, #2. In: {\em #3: Proceedings of the #4, #5}. (#6, #7. #8), #9.
+    }
+    % 1: Presentation authors, presenting author underlined
+    % 2: Presentation title
+    % 3: Title of collected work
+        % Example (Presentation at ACS): #3 = {Book of Abstracts}
+    % 4: Name of Meeting
+        % Example (Presentation at ACS): #4 = {Spring 2024 National Meeting of the American Chemical Society}
+        % Example (MERCURY): #4 = {22$^{\rm nd}$ MERCURY Conference on Computational Chemistry}
+    % 5: Location, Month, Dates, Year of Conference
+        % Example (ACS Spring 2024): #5 = {New Orleans, LA, USA, March 17-21 2024}
+    % 6: Publisher
+        % Example (ACS): #7 = {ACS Publishing}
+    % 7: Place of Publication
+        % Example (ACS): #8 = {Washington, DC}
+    % 8: Presentation number/Paper ID
+        % Example (ACS): #10 = {\#3979135}
+
 \newcommand{\PosterEntry}[7]{
     \noindent ``\textbf{#1},'' Contributed poster at the #2. #3, \##4. (#5)
     \begin{description}
